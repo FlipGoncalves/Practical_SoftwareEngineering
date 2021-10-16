@@ -3,7 +3,7 @@ package com.lab1.app;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.converter.GSon.GsonConverterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 import com.lab1.app.IpmaCityForecast;
 import com.lab1.app.IpmaService;
 
@@ -28,8 +28,12 @@ public class App
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        int CITY = 0;
+        if (args.length == 1)
+            CITY = Integer.parseInt(args[0]);
+
         IpmaService service = retrofit.create(IpmaService.class);
-        Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY_ID_AVEIRO);
+        Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY != 0 ? CITY: CITY_ID_AVEIRO);
 
         try {
             Response<IpmaCityForecast> apiResponse = callSync.execute();

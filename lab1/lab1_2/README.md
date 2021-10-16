@@ -6,7 +6,7 @@ mvn package -e
 
 java -cp target/+++++-app-1.0-SNAPSHOT.jar +++++.App
 ou
-mvn exec:java -Dexec.mainClass="+++++.App
+mvn exec:java -Dexec.mainClass="+++++.App"
 # trocar os +++++ pelos nomes  
 
 -------------------------------------
@@ -22,7 +22,7 @@ mvn exec:java -Dexec.mainClass="com.lab1.app.App
 <dependency>
     <groupId>com.squareup.retrofit2</groupId>
     <artifactId>retrofit</artifactId>
-    <version>2.7.0</version>
+    <version>2.8.0</version>
 </dependency>
 <dependency>
     <groupId>com.google.code.gson</groupId>
