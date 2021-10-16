@@ -29,8 +29,9 @@ public class App
                 .build();
 
         int CITY = 0;
-        if (args.length == 1)
+        if (args.length == 1) {
             CITY = Integer.parseInt(args[0]);
+        }
 
         IpmaService service = retrofit.create(IpmaService.class);
         Call<IpmaCityForecast> callSync = service.getForecastForACity(CITY != 0 ? CITY: CITY_ID_AVEIRO);
