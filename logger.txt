@@ -1,0 +1,41 @@
+commit d8fa2922059a31762290ba721bf134cf621d316b
+Author: FlipGoncalves <filipeg@ua.pt>
+Date:   Sat Oct 16 17:15:42 2021 +0100
+
+    changes
+
+commit c7d2988105a9cbf4322dbc1c06e350a362d3f5fc
+Author: FlipGoncalves <filipeg@ua.pt>
+Date:   Sat Oct 16 17:00:25 2021 +0100
+
+    changes
+
+commit a36f389cd9dd63521a3d11953d441f00bc1de4c0
+Author: FlipGoncalves <filipeg@ua.pt>
+Date:   Thu Oct 14 13:24:57 2021 +0100
+
+    readme 1.3
+
+commit 5ad422fde3cb98e06e4b3851aee4d8e2eaa4a121
+Author: FlipGoncalves <filipeg@ua.pt>
+Date:   Wed Oct 13 11:41:52 2021 +0100
+
+    read me lab1_3
+
+commit dfd14fee4d519935efe30f0f0bfd220f2d8cc65f
+Author: FlipGoncalves <filipeg@ua.pt>
+Date:   Wed Oct 13 11:39:12 2021 +0100
+
+    lab_3 git experiment
+
+commit ff6efbc56c93b581b1a85991949b5271d4889d36
+Author: FlipGoncalves <filipeg@ua.pt>
+Date:   Wed Oct 13 11:34:59 2021 +0100
+
+    starting
+
+commit 3c9d06f0c35cfee378d0272a7468f49c8241072f
+Author: Filipe Gonçalves <61736453+FlipGoncalves@users.noreply.github.com>
+Date:   Wed Oct 13 09:52:10 2021 +0100
+
+    Initial commit
