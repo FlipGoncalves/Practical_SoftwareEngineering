@@ -29,3 +29,10 @@ Usrename: filipe_admin
 # eliminar um container
 $ docker stop container_name
 $ docker rm container_name
+
+# 1.4 d) em Manjaro
+$ sudo pacman -S postgresql
+$ sudo passwd postgres
+Para entrar no cluster: 
+$ sudo su postgres -l # or sudo -u postgres -i initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
+[~$ exit
