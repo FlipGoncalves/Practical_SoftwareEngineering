@@ -36,3 +36,15 @@ $ sudo passwd postgres
 Para entrar no cluster: 
 $ sudo su postgres -l # or sudo -u postgres -i initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/'
 [~$ exit
+
+# 1.4 d) com docker
+$ docker pull postgres:latest
+$ docker volume create postgres-volume
+$ docker run -d --name=postgres13 -p 5432:5432 -v postgres-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=[my_pass] postgres
+$ docker exec -it postgres13 psql -U postgres
+
+# 1.4 e)
+$ docker-compose up
+$ docker-compose build
+$ docker-compose run web env
+$ docker-compose stop
