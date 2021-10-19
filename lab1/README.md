@@ -10,9 +10,12 @@ A) The default lifecycle handles the project deployment. Its main phases are:
 
 B) Yes, even if maven is a build tool, its also a software project management and comprehension tool, based on the concept of a project object model (POM).
 
-C) git branch -b branch_name
-   git commit -m "message"
+C) git checkout -b <.new-feature>
+   git status
+   git add <.some-file>
+   git commit
+   git push -u origin <.new-feature>
 
 D) The commit message should be concise and straight to the point, if u change a line in a script, you should put the line in the commit message, etc. It also should have the name of the person who commited it so it doesn't confuse the rest of the team. Each message should have an explanation of what you changed/added/deleted, but it can´t be a small message, like three words, nor a long one, it needs to have the required level of detail.
 
-E) 
+E) For a production database, its better to configure the volume when you start the container, because the default volume for a starting container is very low no space compared to what the database may require.
