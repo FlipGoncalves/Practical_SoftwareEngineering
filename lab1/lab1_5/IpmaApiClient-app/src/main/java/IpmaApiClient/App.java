@@ -8,7 +8,7 @@ import java.util.*;
 
 public class App
 {
-    public static List<CityForecast> getAllData(String local) {
+    public static CityForecast getAllData(String local) {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://api.ipma.pt/open-data/")
@@ -35,7 +35,7 @@ public class App
                 Response<IpmaCityForecast> apiResponse = callSync.execute();
                 IpmaCityForecast forecast = apiResponse.body();
 
-                return forecast.getData();
+                return forecast.getData().listIterator().next();
 
             } catch (Exception ex) {
                 ex.printStackTrace();

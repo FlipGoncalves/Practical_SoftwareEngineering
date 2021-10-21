@@ -6,7 +6,7 @@
 
   <groupId>IpmaApiClient</groupId>
   <artifactId>IpmaApiClient-app</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1</version>
 
   <name>IpmaApiClient-app</name>
   <!-- FIXME change it to the project's website -->
@@ -94,6 +94,19 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <configuration>
+              <archive>
+                  <manifest>
+                      <mainClass>fully.qualified.MainClass</mainClass>
+                  </manifest>
+              </archive>
+              <descriptorRefs>
+                  <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+          </configuration>
+      </plugin>
       </plugins>
     </pluginManagement>
   </build>

@@ -1,19 +1,12 @@
 package WeatherForecastByCity;
 
-import java.util.*;
-import IpmaApiClient.*;
+import IpmaApiClient.App;
+import IpmaApiClient.CityForecast;
 
-/**
- * Hello world!
- *
- */
 public class App_Weather 
 {
     public static void main(String[] args) {
-        List<CityForecast> api = App.getAllData(args[0]);
-        for (int i = 0; i < api.size(); i++) {
-            System.out.println(api.get(i));
-        }
+        CityForecast api = App.getAllData(args[0]);
+        System.out.println("Max temp for today:" + api.getTMax());
     }
 }
-    

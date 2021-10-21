@@ -14,19 +14,30 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>IpmaApiClient</groupId>
-      <artifactId>IpmaApiClient-app</artifactId>
-      <version>1.0</version>
-      <scope>system</scope>
-      <systemPath>/home/flip/Área de Trabalho/IES_98083/lab1/lab1_5/IpmaApiClient-app/target/IpmaApiClient-app-1.0-SNAPSHOT.jar</systemPath>
+    <dependency>  
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
     </dependency>
+    <dependency>
+			<groupId>IpmaApiClient</groupId>
+      <artifactId>IpmaApiClient-app</artifactId>
+      <version>1.1</version>
+		</dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+        <id>my-local-repo</id>
+        <url>file://${basedir}/lib</url>
+    </repository>
+  </repositories>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
