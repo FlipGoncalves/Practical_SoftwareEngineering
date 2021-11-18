@@ -8,10 +8,10 @@
 		<version>2.5.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pt.ua.ies</groupId>
-	<artifactId>crud_restful_api</artifactId>
+	<groupId>Aula3_3</groupId>
+	<artifactId>Aula3_3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>crud_restful_api</name>
+	<name>app</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -29,7 +29,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
