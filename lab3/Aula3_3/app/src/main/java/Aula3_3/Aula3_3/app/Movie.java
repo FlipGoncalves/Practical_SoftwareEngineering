@@ -1,5 +1,6 @@
 package Aula3_3.Aula3_3.app;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -11,15 +12,15 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Movie")
-public class Movie {
+@Table(name = "movie")
+public class Movie implements Serializable {
 
 	private Integer id;
     private String title;
 	@OneToMany(targetEntity = Quote.class,fetch = FetchType.EAGER, mappedBy = "movie", cascade = CascadeType.ALL)
 	private Set<Quote> quotes;
 
-	public Movie(Integer id, String titlet) {
+	public Movie(Integer id, String title) {
 		this.id = id;
         this.title = title;
 	}

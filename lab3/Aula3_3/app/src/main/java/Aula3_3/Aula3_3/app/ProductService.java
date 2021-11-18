@@ -8,15 +8,18 @@ import java.util.List;
 @Service
 public class ProductService {
     @Autowired
-    private MovieRepository repository;
+    MovieRepository repository;
     @Autowired
-    private QuoteRepository quotes;
+    QuoteRepository quotes;
 
     public Movie saveMovie(Movie product) {
         product.getQuotes().forEach( ( Quote q ) -> {
+            q.setMovie(product);
+            product.addQuote(q);
             quotes.save(q);
           } );
-        return repository.save(product);
+        repository.save(product);
+        return product;
     }
 
     public List<Movie> saveMovies(List<Movie> products) {
@@ -33,7 +36,8 @@ public class ProductService {
 
     public Quote saveQuote(Quote product) {
         repository.save(product.getMovie());
-        return quotes.save(product);
+        quotes.save(product);
+        return product;
     }
 
     public List<Quote> saveQuotes(List<Quote> products) {
